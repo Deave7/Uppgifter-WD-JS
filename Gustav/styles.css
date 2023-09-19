@@ -1,0 +1,80 @@
+body {
+    background-color: rgb(54, 23, 94);
+    min-height: 97vh;
+    max-height: 97vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    color: white;
+    background-color: black;
+    padding: 14px 16px;
+}
+
+.nav {
+    background-color: rgb(0, 0, 0);
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.nav a {
+    float: left;
+    color: rgb(185, 136, 246);
+    text-align: center;
+    padding: 14px 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    font-size: 20;
+}
+
+.nav a:hover {
+    background-color: rgb(60, 60, 60);
+    color: rgb(185, 136, 246);
+}
+
+.nav a.active {
+    text-decoration: underline;
+    color: rgb(185, 136, 246);
+}
+
+.flexContainer {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+ .flexContainer > div {
+    margin-right: 15px;
+ }
+
+ .flexContainer h3 {
+    margin: 0;
+ }
+
+footer {
+    display: flex;
+    background-color: black;
+    margin-top: auto;
+    height: 40px;
+    align-items: center;
+}
+
+.footer p {
+    color: rgb(185, 136, 246);
+    padding: 14px 14px;
+    margin: 0;
+    justify-content: center;
+    
+}
+
+.footer a {
+    color: rgb(185, 136, 246);
+    padding: 14px 16px;
+    margin: 0;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
