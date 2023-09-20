@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(187, 224, 187);
+}
+
+
+p {
+    margin: 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+ol {
+    color: gray;
+}
+
+ul {
+    background-color: hotpink;
+    width: 500px;
+}
