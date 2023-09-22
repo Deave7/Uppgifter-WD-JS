@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: lightgrey;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40rem;
+    height: 25rem;
+    background-color: white;
+}
+
+.item {
+    width: 13rem;
+    height: 13rem;
+    background-color: rgb(189,25,24);
+    border-radius: 10rem;
+}

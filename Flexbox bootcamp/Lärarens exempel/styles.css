@@ -1,0 +1,60 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #E7E2E2;
+	display: flex;
+	flex-direction: column;  /* main-axis är column */
+	align-items: center; /* row är cross-axis */
+}
+
+.japan-flag {
+	background-color: white;
+	width: 60vw;
+	height: 35vw;
+	display: flex;
+	flex-direction: row;  /* main-axis är row*/
+	justify-content: center;  /* centrerar längs main-axis */
+	align-items: center;  /* cross-axis, column */
+}
+
+/* Vi väljer ut: alla HTML-element med klassen "circle", som har ett element med klassen "japan-flag" som PARENT. */
+.japan-flag > .circle {
+	background-color: #C61D0A;
+	width: 20vw;
+	height: 20vw;
+	border-radius: 50%;
+}
+
+/* Vi väljer ut: alla HTML-element med klassen "circle", som har ett element med klassen "japan-flag" som ANCESTOR. */
+/* .japan-flag .circle */
+
+
+/* Vi väljer ut: alla HTML-element med klassen "circle". */
+/* .circle */
+
+/* Specificitet: kategorierna id, class, element */
+/* Specificitet: 010 */
+.menu-easy {
+	display: flex;
+	flex-direction: row;
+	margin-top: 3rem;
+	list-style: none;
+	padding: 0;
+	border: 1px solid black;
+	width: 90vw;
+}
+/* Specificitet: 011 */
+.menu-easy > li {
+	background-color: #E4E4E4;
+	flex-grow: 1;
+	padding: 1em 0;
+	text-align: center;
+}
+/* Specificitet: 020 */
+.menu-easy > :hover {
+	background-color: #7E7E7E;
+	color: white;
+}
