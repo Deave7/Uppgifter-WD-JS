@@ -24,15 +24,29 @@ body {
     text-align: center;
 }
 
-.container > .quote {
-    margin-top: auto;
-}
-.container > .author {
+.author {
     padding-top: 1rem;
 }
 
-.container > p {
+.container > div {
     font-style: italic;
+}
+
+div.circle:nth-child(2) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+div.circle:first-child {
+    background-color: black;
+}
+
+p.quote {
+    margin-top: 13rem;
+}
+
+p.author {
+    color: rgb(91, 106, 110)
 }
 
 .circle {
@@ -43,6 +57,9 @@ body {
     border-radius: 100%;
 }
 
-.circle:first-child {
-    background-color: red;
+.circleContainer {
+    display: flex;
+    flex-grow: 1;
+    align-items: flex-end;
+    justify-content: center;
 }
