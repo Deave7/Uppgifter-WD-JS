@@ -1,4 +1,4 @@
-console.log("hello world");
+//bigger
 
 let a = 20;
 let b = 10;
@@ -9,6 +9,8 @@ if (a > b) {
 else {
     console.log("B is bigger than A!")
 }
+
+//equals or not
 
 let c = "apple"
 let d = "apple"
@@ -24,6 +26,8 @@ if (e != f) {
     console.log("C does NOT equals D")
 }
 
+//biggest
+
 let num1 = prompt("Please enter your first number:");
 let num2 = prompt("Please enter your sedond number:")
 
@@ -34,6 +38,7 @@ else {
     console.log("Your second number", num2, "was bigger than your first number", num1);
 }
 
+//even or not 
 
 let num3 = prompt("Please enter a number to check if it's even or odd")
 
@@ -44,6 +49,8 @@ else {
     console.log("The number you inputed", num3, "was odd! :( ")
 }
 
+//Lisebergsvakten
+
 let height = prompt("Please enter your height: ")
 
 if (height >= 150) {
@@ -52,6 +59,8 @@ if (height >= 150) {
 else {
     console.log("False")
 }
+
+//Lisebergsvakten 2
 
 let ridePass = prompt("Please enter what type of ride pass you have:")
 
@@ -68,6 +77,7 @@ else if (ridePass.toLocaleLowerCase() == "platinum") {
     console.log("You  have the correct ride pass to go on Balder. Please proceed.")
 }
 
+//BMI kalkylator
 
 heightTwo = prompt("Please enter your height in M:")
 weightTwo = prompt("Please enter your weight in KG:")
@@ -89,7 +99,7 @@ else if (weightTwo / (heightTwo * heightTwo) > 30)
     console.log("obesity")
 } 
 
-
+//Weekdays
 
 let weekday = prompt("Please enter what day in the week it is using a number 1-7")
 
@@ -116,7 +126,7 @@ switch (weekday) {
         console.log("It's sunday")
         break;
     default:
-        console.log("Invalid input")
+        console.log("false")
 }
 
 
