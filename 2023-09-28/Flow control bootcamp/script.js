@@ -129,4 +129,48 @@ switch (weekday) {
         console.log("false")
 }
 
+//Month
+
+let month = prompt("Please enter what month it is using a number 1-12")
+
+switch (month) {
+    case "1":
+        console.log("It's january")
+        break;
+    case "2":
+        console.log("It's febuary")
+        break;
+    case "3":
+        console.log("It's march")
+        break;
+    case "4":
+        console.log("It's april")
+        break;
+    case "5":
+        console.log("It's may")
+        break;
+    case "6":
+        console.log("It's june")
+        break;
+    case "7":
+        console.log("It's july")
+        break;
+    case "8":
+        console.log("It's august")
+        break;
+    case "9":
+        console.log("It's september")
+        break;
+    case "10":
+        console.log("It's october")
+        break;
+    case "11":
+        console.log("It's november")
+        break;
+    case "12":
+        console.log("It's december")
+        break;
+    default:
+        console.log("false")
+}
 
