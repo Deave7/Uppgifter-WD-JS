@@ -22,7 +22,7 @@ console.log(getYear(year))
 
 let numOne = 10;
 let numTwo = 20;
-let operator = "+"
+let operator = "*"
 
 
 function simpleMath(numOne, numTwo, operator) {
@@ -40,11 +40,11 @@ function simpleMath(numOne, numTwo, operator) {
     }
     else if (operator == "-")
     {
-        console.log(multiplication(numOne, numTwo)) 
+        console.log(subtraction(numOne, numTwo)) 
     }
     else if (operator == "*")
     {
-        console.log(subtraction(numOne, numTwo)) 
+        console.log(multiplication(numOne, numTwo)) 
     }
     else if (operator == "/")
     {
