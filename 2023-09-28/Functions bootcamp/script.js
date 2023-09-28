@@ -50,7 +50,6 @@ function simpleMath(numOne, numTwo, operator) {
     {
         console.log(division(numOne, numTwo)) 
     }
-  
 }
 
 function addition(numOne, numTwo) {
