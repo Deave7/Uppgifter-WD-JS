@@ -1,21 +1,29 @@
 body {
-    background-color: rgb(54, 23, 94);
-    min-height: 97vh;
-    max-height: 97vh;
+    background-image: linear-gradient(rgb(31, 21, 77), rgb(111, 0, 255));
+    height: 100vh;
+    width: 99vw;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .box {
-    color: white;
-    background-color: black;
+    color: rgb(243, 232, 255);
+    background-color: rgb(36, 36, 36);
     padding: 14px 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 5px;
+}
+
+.box img {
+    padding-left: 5px;
 }
 
 .nav {
-    background-color: black;
+    background-color: rgb(36, 36, 36);
     overflow: hidden;
     margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .nav a {
@@ -26,6 +34,11 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
     font-size: 20;
+    
+}
+
+section.box {
+    margin-top: 0.7rem;
 }
 
 .nav a:hover {
@@ -54,10 +67,13 @@ body {
 
 footer {
     display: flex;
-    background-color: black;
-    margin-top: auto;
+    background-color: rgb(36, 36, 36);
+    align-items: flex-end;
     height: 40px;
     align-items: center;
+    margin-top: auto;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
 }
 
 .footer p {
