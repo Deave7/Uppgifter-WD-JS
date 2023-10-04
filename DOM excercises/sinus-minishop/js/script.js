@@ -105,19 +105,32 @@ function removeClass() {
 
 function addAlternative() {
     let element = document.querySelector("footer > section > article:nth-child(1)")
-    element.innerHTML += "<a> Quit </a>"
+    element.innerHTML += '<a href="#""> Quit </a>'
 }
 
+function addAlternative2() {
+    let element = document.querySelector("footer > section > article:nth-child(1)");
+    element.insertAdjacentHTML('beforeend', '<a href="#">Quit</a>');
+}
+
+
 addAlternative()
+addAlternative2()
 
 //13 
 
 function addProduct() {
     let element = document.querySelector("main")
-    element.innerHTML += '<article class="art-4"><figure><img src="img/hoodie-forrest.png" alt="hoodie"></figure><h2>Sinus Hoodie</h2><h3>Forrest</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolores.</p></article>';
+    element.innerHTML += '<article class="art-4"><figure><img src="img/hoodie-forrest.png" alt="hoodie"></figure><h2>Sinus Hoodie</h2><h3>Forrest</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolores.</p><button>Add to cart</button></article>';
+}
+
+function addProduct2() {
+    let element = document.querySelector("main")
+    element.insertAdjacentHTML('beforeend', '<article class="art-4"><figure><img src="img/hoodie-forrest.png" alt="hoodie"></figure><h2>Sinus Hoodie</h2><h3>Forrest</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolores.</p></article>')
 }
 
 addProduct()
+
 
 //14 
 
