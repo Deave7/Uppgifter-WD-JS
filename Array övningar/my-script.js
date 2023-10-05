@@ -222,3 +222,35 @@ for(i = 0; i < fruits3.length; i++) {
     console.log(`${i} - ` , fruits3[i])
 }
 
+//övningar för arrow functions 
+
+const sum = (num1, num2) => num1 + num2 
+
+console.log(sum(12,10))
+
+const stringLength = (str) => str.length
+const stringLength2 = str => console.log(`the length of "${str}" is:`, str.length)
+
+console.log(stringLength('Smiley day to you'))
+console.log(stringLength2('Smiley day to you sir!'))
+
+
+const stringLength3 = str => {
+    let length = str.length 
+    console.log(`the length of "${str} is`, length)
+    return str.length
+}
+
+stringLength3('willynilly')
+
+let alerts = ["Hey, you are awesome", "You are so wonderful", "What a marvel you are", "You're so lovely", "You're so sweet that I'd think you're a sweet potato -- and I LOOOOVE POTATOES"]
+
+function showAlert(name){    
+    alert(alerts[(Math.floor(Math.random()*alerts.length))] + `, ${name}!`)
+}
+
+const showAlert2 = name => { alert(alerts[(Math.floor(Math.random()*alerts.length))] + `, ${name}!`)}
+
+
+
+
