@@ -53,12 +53,11 @@ function printFruits3() {
 function searchArray(array, key) {
     let result = [];
     for(i = 0; i < array.length; i++) {
-        if (array[i] === key) {
-            result.push(true)
+        
+        if (array[i].includes(key)) {
+            result.push(array[i])
         }
-        else {
-            result.push(false)
-        }
+
     }
     return result
 }
