@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lightgray;
+    height: 100vh;
+    width: 30vw;
+}
+
+button, input {
+    margin: 1rem 1rem 1rem 4rem;
+    padding: 5px;
+    border-radius: 20px;
+    width: 10rem;
+    text-align: center;
+}
+
+ul {
+    margin: 1rem;
+    padding-left: 1rem;
+}
+
+li {
+    padding: 10px;
+    margin: 1px;
+    border: 3px solid black;
+    text-align: center;
+    list-style: none;
+}
+
+.attending {
+    background-color: green;
+    color: white;
+}
+
+.notAttending {
+    background-color: red;
+    color: white;
+}
