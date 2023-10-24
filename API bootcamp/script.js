@@ -36,13 +36,18 @@ fetchDogData(dogUrl)
 
 //3
 let bookUrl = 'https://majazocom.github.io/Data/books.json'
+const bookList = document.getElementById('bookList')
 
 function fetchBookData(url) {
     fetch(url)
     .then((response) => response.json())
     .then((data) => {
        const filteredData = data.filter(element => element.pages > 500 )
-       console.log(filteredData)
+       filteredData.forEach(element => {
+        let li = document.createElement('li')
+        li.innerHTML = element.title
+        bookList.appendChild(li)
+       })
     })
 }
 
