@@ -1,26 +1,15 @@
-/* const apiKey = 'b673a1f7d7e269de0687473dca6daad4';
-const searchUrl = 'https://api.flickr.com/services/rest?'
-let search = 'cats';
+const apiKey = 'b673a1f7d7e269de0687473dca6daad4';
+const url = 'https://api.flickr.com/services/rest?'
+let search = 'banana';
 
-function fetchPhotos(url, apiKey, search) {
-    fetch(`${url}method=flickr.photos.search&api_key=${apiKey}&text=${search}=per_page=20&format=json&nojsoncallback=true`)
-    .then((data) => {
-        console.log(data)
-    })
-
-}
-
-fetchPhotos(searchUrl, apiKey, search) */
-
-const url = 'https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=b673a1f7d7e269de0687473dca6daad4&text=$cats=per_page=20&format=json&nojsoncallback=true'
-
-async function grabData(url) {
-    const response = await fetch(url)
-    console.log(response)
+async function fetchPhotos() {
+    const response = await fetch(`${url}method=flickr.photos.search&api_key=${apiKey}&text=${search}&per_page=20&format=json&nojsoncallback=true`)
     const data = await response.json()
-    console.log(data.photos.photo)
+    console.log(data)
+
 }
 
-grabData(url)
+fetchPhotos()
+
 
 
