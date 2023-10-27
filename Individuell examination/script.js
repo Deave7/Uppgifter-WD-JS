@@ -61,6 +61,7 @@ const populateModal = async (planet) => {
         
      }
      else {
+        moonSection.style.display = 'block'
          moonContent.innerHTML = planet.moons.join(', ')
      }
 
