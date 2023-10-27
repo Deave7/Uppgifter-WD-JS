@@ -53,9 +53,12 @@ const populateModal = async (planet) => {
     distanceContent.innerHTML = planet.distance
     maxTempContent.innerHTML = planet.temp.day
     minTempContent.innerHTML = planet.temp.night
+    //min temp står på båda ställena av någon anledning *****
 
      if(planet.type == 'star' || planet.moons.length === 0) {
         moonSection.style.display = 'none'
+        //gör så att avstånd till solen döljs när man klickar på solen ****
+        
      }
      else {
          moonContent.innerHTML = planet.moons.join(', ')
