@@ -35,7 +35,7 @@ const moonContent = document.getElementById('moons-content')
 const moonSection = document.getElementById('moon-section')
 
 
-//funktion för att hämta data
+//funktion för att hämta data från Majas öppna API 
 /* const fetchData = async (planetId) => {
     try {
         const response = await fetch(urlOpen)
