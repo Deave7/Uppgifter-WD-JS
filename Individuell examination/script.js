@@ -131,7 +131,6 @@ const closeModal = () => {
   }
 
 //kontrollerar vilket element som användaren trycker på och kallar sedan på funktionerna fetchData, changePlanetColor
-
 imageContainer.addEventListener('click', function(event) {
     const planetIds = {'sun': 0, 'mercury': 1, 'venus': 2, 'earth': 3, 'mars': 4, 'jupiter': 5, 'saturn-ring': 6, 'uranus': 7, 'neptune': 8}
     const clickedElement = event.target
