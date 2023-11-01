@@ -4,7 +4,8 @@ Funktionsnamnen har jag försökt skriva så tydligt att det inte ska gå att mi
 */
 
 //globala variabler
-const url = 'https://majazocom.github.io/Data/solaris.json'
+const urlOpen = 'https://majazocom.github.io/Data/solaris.json'
+const urlClosed = 'https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com/'
 
 //element addresser 
 const mainContent = document.getElementById('main-content')
@@ -35,9 +36,9 @@ const moonSection = document.getElementById('moon-section')
 
 
 //funktion för att hämta data
-const fetchData = async (planetId) => {
+/* const fetchData = async (planetId) => {
     try {
-        const response = await fetch(url)
+        const response = await fetch(urlOpen)
 
         if (!response.ok) {
             throw new Error("Failed to load data")
@@ -50,10 +51,49 @@ const fetchData = async (planetId) => {
     catch(error) {
         console.error(error)
     }
+} */
+
+//funktion för att hämta API nyckel
+const fetchKey = async (planetId) => {
+    try {
+        const response = await fetch(`${urlClosed}keys`, {
+            method: 'POST'
+        })
+
+        if (!response.ok) {
+            throw new Error("Failed to fetch key")
+        }
+
+        const data = await response.json()
+        fetchData(data.key, planetId)
+    }
+    catch(error) {
+        console.error(error)
+    }
+}
+
+//funktion för att hämta data
+const fetchData = async (key, planetId) => {
+    try {
+        const response = await fetch(`${urlClosed}bodies`, {
+            method: 'GET',
+            headers: {'x-zocom': `${key}`}
+        })
+
+        if (!response.ok) {
+            throw new Error("Failed to load data")
+        }
+
+        const data = await response.json()
+        populateModal(data.bodies[planetId])
+    }
+    catch(error) {
+        console.error(error)
+    }
 }
 
 //funktion för att fylla modalen med rätt information
-const populateModal = async (planet) => {
+const populateModal = (planet) => {
     title.innerHTML = planet.name
     latinName.innerHTML = planet.latinName
     planetDescription.innerHTML = planet.desc
@@ -97,47 +137,47 @@ imageContainer.addEventListener('click', function(event) {
 
     if(clickedElement.id === 'sun') {
         planetId = 0
-        fetchData(planetId)
+        fetchKey(planetId)
         changePlanetColor(planetId)
     }
     else if (clickedElement.id === 'mercury') {
         planetId = 1
-        fetchData(planetId)
+        fetchKey(planetId)
         changePlanetColor(planetId)
     }
     else if (clickedElement.id === 'venus') {
         planetId = 2
-        fetchData(planetId)
+        fetchKey(planetId)
         changePlanetColor(planetId)
     }
     else if (clickedElement.id === 'earth') {
         planetId = 3
-        fetchData(planetId)
+        fetchKey(planetId)
         changePlanetColor(planetId)
     }
     else if (clickedElement.id === 'mars') {
         planetId = 4
-        fetchData(planetId)
+        fetchKey(planetId)
         changePlanetColor(planetId)
     }
     else if (clickedElement.id === 'jupiter') {
         planetId = 5
-        fetchData(planetId)
+        fetchKey(planetId)
         changePlanetColor(planetId)
     }
     else if (clickedElement.id === 'saturn-ring') {
         planetId = 6
-        fetchData(planetId)
+        fetchKey(planetId)
         changePlanetColor(planetId)
     }
     else if (clickedElement.id === 'uranus') {
         planetId = 7
-        fetchData(planetId)
+        fetchKey(planetId)
         changePlanetColor(planetId)
     }
     else if (clickedElement.id === 'neptune') {
         planetId = 8
-        fetchData(planetId)
+        fetchKey(planetId)
         changePlanetColor(planetId)
     }
     else {
