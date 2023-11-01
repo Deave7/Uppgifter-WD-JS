@@ -54,7 +54,7 @@ const moonSection = document.getElementById('moon-section')
 } */
 
 //funktion för att hämta API nyckel
-const fetchKey = async (planetId) => {
+const fetchApiKey = async (planetId) => {
     try {
         const response = await fetch(`${urlClosed}keys`, {
             method: 'POST'
@@ -131,59 +131,19 @@ const closeModal = () => {
   }
 
 //kontrollerar vilket element som användaren trycker på och kallar sedan på funktionerna fetchData, changePlanetColor
-imageContainer.addEventListener('click', function(event) {
-    const clickedElement = event.target
-    let planetId;
 
-    if(clickedElement.id === 'sun') {
-        planetId = 0
-        fetchKey(planetId)
-        changePlanetColor(planetId)
-    }
-    else if (clickedElement.id === 'mercury') {
-        planetId = 1
-        fetchKey(planetId)
-        changePlanetColor(planetId)
-    }
-    else if (clickedElement.id === 'venus') {
-        planetId = 2
-        fetchKey(planetId)
-        changePlanetColor(planetId)
-    }
-    else if (clickedElement.id === 'earth') {
-        planetId = 3
-        fetchKey(planetId)
-        changePlanetColor(planetId)
-    }
-    else if (clickedElement.id === 'mars') {
-        planetId = 4
-        fetchKey(planetId)
-        changePlanetColor(planetId)
-    }
-    else if (clickedElement.id === 'jupiter') {
-        planetId = 5
-        fetchKey(planetId)
-        changePlanetColor(planetId)
-    }
-    else if (clickedElement.id === 'saturn-ring') {
-        planetId = 6
-        fetchKey(planetId)
-        changePlanetColor(planetId)
-    }
-    else if (clickedElement.id === 'uranus') {
-        planetId = 7
-        fetchKey(planetId)
-        changePlanetColor(planetId)
-    }
-    else if (clickedElement.id === 'neptune') {
-        planetId = 8
-        fetchKey(planetId)
+imageContainer.addEventListener('click', function(event) {
+    const planetIds = {'sun': 0, 'mercury': 1, 'venus': 2, 'earth': 3, 'mars': 4, 'jupiter': 5, 'saturn-ring': 6, 'uranus': 7, 'neptune': 8}
+    const clickedElement = event.target
+    const planetId = planetIds[clickedElement.id]
+
+    if (planetId !== undefined) {
+        fetchApiKey(planetId)
         changePlanetColor(planetId)
     }
     else {
         alert('Klicka på en planet för att få specifik information!')
     }
-
 })
 
 //kallar på funktionen closeModal när användaren klickar någonstans på skärmen

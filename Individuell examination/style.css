@@ -157,6 +157,7 @@ hr {
 
 #main-content {
     transition: 0.5s;
+    z-index: 1;
 }
 
 #main-title {
