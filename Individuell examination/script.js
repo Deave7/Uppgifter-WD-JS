@@ -1,3 +1,8 @@
+/*
+Jag har valt att dela in funktionerna så att varje funktion bara gör en sak. Detta gör att jag lättare kan återanvända min kod. 
+Funktionsnamnen har jag försökt skriva så tydligt att det inte ska gå att missta vad den gör.
+*/
+
 //globala variabler
 const url = 'https://majazocom.github.io/Data/solaris.json'
 
@@ -59,9 +64,8 @@ const populateModal = async (planet) => {
 
      if(planet.type == 'star' || planet.moons.length === 0) {
         moonSection.style.display = 'none'
-        //gör så att avstånd till solen döljs när man klickar på solen ****
-        
      }
+
      else {
         moonSection.style.display = 'block'
          moonContent.innerHTML = planet.moons.join(', ')
@@ -86,6 +90,7 @@ const closeModal = () => {
     mainContent.style.zIndex = 1;
   }
 
+//kontrollerar vilket element som användaren trycker på och kallar sedan på funktionerna fetchData, changePlanetColor
 imageContainer.addEventListener('click', function(event) {
     const clickedElement = event.target
     let planetId;
@@ -141,10 +146,12 @@ imageContainer.addEventListener('click', function(event) {
 
 })
 
+//kallar på funktionen closeModal när användaren klickar någonstans på skärmen
 modal.addEventListener('click', function(event) {
     closeModal()
 })
 
+//funktion för att ändra färgen på planeten som syns i modalen
 const changePlanetColor = (planetId) => {
     const colors = ['#FFD029', '#888888', '#E7CDCD', '#428ED4', '#EF5F5F', '#E29468', '#C7AA72', '#C9D4F1', '#7A91A7']
     planetItem1.style.backgroundColor = colors[planetId]
@@ -152,6 +159,7 @@ const changePlanetColor = (planetId) => {
     planetItem3.style.backgroundColor = colors[planetId]
 }
 
+//funktion för att formatera siffrorna man hämtar från API:et
 const formatNumbers = (number) => {
     const numberString = number.toString()
     let formattedNumber = '';
